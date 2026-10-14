@@ -1,0 +1,149 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+    color: var(--ink);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+}
+
+.logo::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--cyan);
+    box-shadow: 0 0 14px rgba(57, 228, 230, 0.8);
+    content: "";
+    transform: rotate(45deg);
+}
+
+.logo span {
+    color: var(--cyan);
+}
+header {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 28px;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px 42px;
+    border-bottom: 1px solid var(--line);
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2.5vw, 32px);
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: #c5d3d7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+    height: 2px;
+    background: var(--cyan);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--cyan);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icons form {
+    margin-right: 3px;
+}
+
+.nav-icons input {
+    width: 175px;
+    padding: 10px 13px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: rgba(7, 21, 27, 0.78);
+    color: var(--ink);
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-icons input:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 3px var(--cyan-soft);
+    outline: none;
+}
+
+.icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: rgba(7, 21, 27, 0.55);
+    font-size: 16px;
+    text-decoration: none;
+    transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.icon:hover {
+    border-color: var(--cyan);
+    background: var(--cyan-soft);
+}
+:root {
+    color-scheme: dark;
+    --ink: #e9f2f3;
+    --muted: #a8b8bd;
+    --deep: #07151b;
+    --cyan: #39e4e6;
+    --cyan-soft: rgba(57, 228, 230, 0.14);
+    --pink: #f044d7;
+    --line: rgba(120, 208, 212, 0.18);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+header {
+    min-width: 320px;
+    color: var(--ink);
+    background:
+        radial-gradient(ellipse at 50% 18%, rgba(5, 62, 71, 0.5), transparent 48%),
+        linear-gradient(rgba(4, 17, 23, 0.96), rgba(4, 17, 23, 0.98)),
+        url("Cool Geometric Triangular Abstract Wallpaper.jpg") center / cover fixed,
+        var(--deep);
+}
