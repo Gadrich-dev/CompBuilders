@@ -12,7 +12,7 @@
         <nav>
             <ul>
                 <li><a href="homepage.html">HOME</a></li>
-                <li><a class="cat" href="#categories">CATEGORY</a></li> 
+                <li><a class="cat" href="#categories">CATEGORY</a></li>
                 <li><a href="about.html">ABOUT</a></li>
                 <li><a href="service.html">SERVICE</a></li>
                 <li><a href="contact.html">CONTACT</a></li>
@@ -180,5 +180,19 @@
         <p>Build something that feels like you.</p>
         <a href="contact.html">Questions? Get in touch <span aria-hidden="true">→</span></a>
     </footer>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const catLink = document.querySelector("a.cat");
+        if (catLink) {
+            catLink.addEventListener("click", function (e) {
+                e.preventDefault(); // Stop it from going to category.html
+                const target = document.querySelector("#categories");
+                if (target) {
+                    target.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
