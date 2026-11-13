@@ -1,0 +1,25 @@
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    flex-shrink: 0;
+    color: var(--ink);
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    text-decoration: none;
+}
+
+.logo::before {
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    background: var(--cyan);
+    box-shadow: 0 0 14px rgba(57, 228, 230, 0.8);
+    content: "";
+    transform: rotate(45deg);
+}
+
+.logo span {
+    color: var(--cyan);
+}
