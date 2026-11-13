@@ -88,3 +88,4 @@ nav a:focus-visible::after {
     border-color: var(--cyan);
     box-shadow: 0 0 0 3px var(--cyan-soft);
     outline: none;
+}
