@@ -23,3 +23,68 @@
 .logo span {
     color: var(--cyan);
 }
+nav ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2.5vw, 32px);
+    list-style: none;
+}
+
+nav a {
+    position: relative;
+    color: #c5d3d7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+nav a::after {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+    height: 2px;
+    background: var(--cyan);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    color: var(--cyan);
+}
+
+nav a:hover::after,
+nav a:focus-visible::after {
+    transform: scaleX(1);
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-icons form {
+    margin-right: 3px;
+}
+
+.nav-icons input {
+    width: 175px;
+    padding: 10px 13px;
+    border: 1px solid var(--line);
+    border-radius: 7px;
+    background: rgba(7, 21, 27, 0.78);
+    color: var(--ink);
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-icons input:focus {
+    border-color: var(--cyan);
+    box-shadow: 0 0 0 3px var(--cyan-soft);
+    outline: none;
