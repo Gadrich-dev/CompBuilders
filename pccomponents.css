@@ -1,3 +1,12 @@
+body {
+    min-width: 320px;
+    color: var(--ink);
+    background:
+        radial-gradient(ellipse at 50% 18%, rgba(5, 62, 71, 0.5), transparent 48%),
+        linear-gradient(rgba(4, 17, 23, 0.96), rgba(4, 17, 23, 0.98)),
+        url("Cool Geometric Triangular Abstract Wallpaper.jpg") center / cover fixed,
+        var(--deep);
+}
 header {
     position: relative;
     z-index: 2;
@@ -50,4 +59,13 @@ nav a:focus-visible {
 nav a:hover::after,
 nav a:focus-visible::after {
     transform: scaleX(1);
+}
+body {
+    min-width: 320px;
+    color: var(--ink);
+    background:
+        radial-gradient(ellipse at 50% 18%, rgba(5, 62, 71, 0.5), transparent 48%),
+        linear-gradient(rgba(4, 17, 23, 0.96), rgba(4, 17, 23, 0.98)),
+        url("Cool Geometric Triangular Abstract Wallpaper.jpg") center / cover fixed,
+        var(--deep);
 }
