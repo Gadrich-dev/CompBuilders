@@ -1,28 +1,16 @@
-.logo {
-    display: inline-flex;
+header {
+    position: relative;
+    z-index: 2;
+    display: flex;
     align-items: center;
-    gap: 7px;
-    flex-shrink: 0;
-    color: var(--ink);
-    font-size: 17px;
-    font-weight: 800;
-    letter-spacing: 1.3px;
-    text-decoration: none;
+    justify-content: space-between;
+    gap: 28px;
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 20px 42px;
+    border-bottom: 1px solid var(--line);
 }
 
-.logo::before {
-    width: 10px;
-    height: 10px;
-    border-radius: 3px;
-    background: var(--cyan);
-    box-shadow: 0 0 14px rgba(57, 228, 230, 0.8);
-    content: "";
-    transform: rotate(45deg);
-}
-
-.logo span {
-    color: var(--cyan);
-}
 nav ul {
     display: flex;
     align-items: center;
@@ -40,6 +28,7 @@ nav a {
     transition: color 0.2s ease;
 }
 
+/* Hover underline animation */
 nav a::after {
     position: absolute;
     right: 0;
@@ -61,31 +50,4 @@ nav a:focus-visible {
 nav a:hover::after,
 nav a:focus-visible::after {
     transform: scaleX(1);
-}
-
-.nav-icons {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.nav-icons form {
-    margin-right: 3px;
-}
-
-.nav-icons input {
-    width: 175px;
-    padding: 10px 13px;
-    border: 1px solid var(--line);
-    border-radius: 7px;
-    background: rgba(7, 21, 27, 0.78);
-    color: var(--ink);
-    font-size: 13px;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.nav-icons input:focus {
-    border-color: var(--cyan);
-    box-shadow: 0 0 0 3px var(--cyan-soft);
-    outline: none;
 }
