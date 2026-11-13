@@ -185,7 +185,7 @@
         const catLink = document.querySelector("a.cat");
         if (catLink) {
             catLink.addEventListener("click", function (e) {
-                e.preventDefault(); // Stop it from going to category.html
+                e.preventDefault();
                 const target = document.querySelector("#categories");
                 if (target) {
                     target.scrollIntoView({ behavior: "smooth" });

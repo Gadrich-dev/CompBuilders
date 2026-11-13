@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,8 +6,25 @@
 	<title>PC Components tedkdst </title>
 </head>
 <body>
-	<main>
-		<h1>PC Components</h1>
-	</main>
+	    <header>
+        <a class="logo" href="homepage.html" aria-label="Comp Builders home">COMP<span>BUILDERS</span></a>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">HOME</a></li>
+                <li><a class="cat" href="#categories" onclick="event.preventDefault(); document.getElementById('categories').scrollIntoView({behavior: 'smooth'});">CATEGORY</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="service.html">SERVICE</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <form action="search" method="GET">
+                <label class="visually-hidden" for="site-search">Search products</label>
+                <input id="site-search" type="search" name="query" placeholder="Search products" required>
+            </form>
+            <a class="icon" href="purchase.html" aria-label="Shopping cart">🛒</a>
+            <a class="icon" href="user.html" aria-label="Your account">👤</a>
+        </div>
+    </header>
 </body>
 </html>
